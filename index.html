@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Parking-Challan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>E-Parking-Challan</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="challan_info.html">Challan Info</a></li>
+                <li><a href="payment.html">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome" id="welcome-section">
+            <h2>Welcome to E-Parking-Challan</h2>
+            <p>This is a simple website for managing parking challans.</p>
+        </section>
+        <section class="auth-section" id="auth-section">
+            <div class="auth-box">
+                <h3>Login</h3>
+                <form id="login-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <br>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="auth-box">
+                <h3>Register</h3>
+                <form id="register-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <br>
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                    <br>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </section>
+        <section class="features" id="features-section" style="display: none;">
+            <h2>Features</h2>
+            <ul>
+                <li>Easy and secure login and registration</li>
+                <li>View and manage your parking challan history</li>
+                <li>Get detailed information about parking challans</li>
+                <li>Make payments for parking challans</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 E-Parking-Challan. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Simulate login
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username && password) {
+                // Simulate successful login
+                document.getElementById('auth-section').style.display = 'none';
+                document.getElementById('features-section').style.display = 'block';
+            }
+        });
+
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Simulate registration
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            if (username && email && password && password === confirmPassword) {
+                // Simulate successful registration
+                document.getElementById('auth-section').style.display = 'none';
+                document.getElementById('features-section').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
